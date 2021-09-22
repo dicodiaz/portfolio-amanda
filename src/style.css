@@ -1,3 +1,15 @@
-body {
-  background-color: bisque;
+#heading {
+  margin-top: 56px;
+  height: 100vw;
+  background-image: url(./img/amanda.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  box-sizing: content-box;
+}
+
+.dark-bg {
+  background: black;
+  height: 10px;
 }
