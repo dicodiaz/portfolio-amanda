@@ -6,7 +6,7 @@
   background-image: url(./img/amanda.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid #212529;
   box-sizing: content-box;
   background-attachment: fixed;
   background-position: 0 57px;
@@ -31,6 +31,24 @@
 
 #main > section > div {
   padding-top: 86px;
+  padding-bottom: 86px;
+}
+
+#pictures {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 1400px;
+}
+
+#pictures > div {
+  /* flex-basis: 50%; */
+  width: 50%;
+  padding: 2px;
+}
+
+#portfolio-title {
+  font-family: Garamond;
 }
 
 @media (max-width: 768px) {
@@ -50,5 +68,11 @@
     background-color: white;
     height: 1px;
     width: 70%;
+  }
+
+  .white-line-short {
+    background-color: white;
+    height: 1px;
+    width: 30%;
   }
 }
