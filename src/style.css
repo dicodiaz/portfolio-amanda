@@ -29,6 +29,11 @@
   font-family: Roboto, sans-serif;
 }
 
+#pictures > div {
+  width: 50%;
+  padding: 2px;
+}
+
 #main > section > div {
   padding-top: 86px;
   padding-bottom: 86px;
@@ -41,14 +46,8 @@
   height: 1400px;
 }
 
-#pictures > div {
-  /* flex-basis: 50%; */
-  width: 50%;
-  padding: 2px;
-}
-
 #portfolio-title {
-  font-family: Garamond;
+  font-family: Garamond, sans-serif;
 }
 
 @media (max-width: 768px) {
