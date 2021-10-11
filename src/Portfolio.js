@@ -38,9 +38,9 @@ export default class Portfolio {
     for (let i = 0; i < this.pictures.length; i++) {
       if (i === 4) {
         seeMoreContainer.id = 'collapsable';
-        // seeMoreContainer.classList.add('collapse');
         container.appendChild(seeMoreContainer);
         relevantContainer = seeMoreContainer;
+        this.collapsedHeight = yCol2;
       }
       if (i % 2 === 0) {
         await this.appendPicture(this.pictures[i], relevantContainer, 0, yCol1);
@@ -50,7 +50,9 @@ export default class Portfolio {
         yCol2 += container.querySelectorAll('img')[i].offsetHeight;
       }
     }
-    container.style.height = Math.max(yCol1, yCol2) + 'px';
+    seeMoreContainer.classList.add('collapse');
+    this.fullHeight = Math.max(yCol1, yCol2);
+    container.style.height = this.collapsedHeight + 'px';
     return this;
   };
 

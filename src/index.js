@@ -7,6 +7,7 @@ const navbarToggler = document.querySelector('.navbar-toggler');
 const menuItems = document.querySelectorAll('#menu > a');
 const pictureList = document.querySelector('#picture-list');
 const carouselItems = document.querySelectorAll('.carousel-item');
+const collapseBtn = document.querySelector('#collapse-btn');
 
 window.onload = () => {
   const importAll = (r) =>
@@ -34,5 +35,17 @@ window.onload = () => {
 
   carouselItems.forEach((carouselItem, i) => {
     portfolio.appendPicture(portfolio.pictures[i + 2], carouselItem);
+  });
+
+  collapseBtn.addEventListener('click', () => {
+    if (pictureList.clientHeight === portfolio.collapsedHeight) {
+      pictureList.style.height = portfolio.fullHeight + 'px';
+      collapseBtn.innerText = 'See less';
+    } else {
+      setTimeout(() => {
+        pictureList.style.height = portfolio.collapsedHeight + 'px';
+        collapseBtn.innerText = 'See more';
+      }, 500);
+    }
   });
 };
