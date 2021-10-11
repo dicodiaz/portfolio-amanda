@@ -1,9 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.font-Roboto {
+  font-family: Roboto, sans-serif;
+}
+
+.font-Garamond {
+  font-family: Garamond, sans-serif;
+}
+
+.white-line {
+  background-color: white;
+  height: 1px;
+  width: 75%;
+}
+
+.white-line-short {
+  background-color: white;
+  height: 1px;
+  width: 25%;
+}
+
 #heading {
   margin-top: 56px;
   height: 100vw;
-  background-image: url(./img/amanda.jpg);
+  background-image: url(./img/cover.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   border-bottom: 10px solid #212529;
@@ -12,21 +32,25 @@
   background-position: 0 57px;
 }
 
-.dark-bg {
-  background: black;
-  height: 10px;
+.cross-fading {
+  position: relative;
 }
 
-.transition-opacity {
-  transition: opacity 0.5s ease-in-out;
+.bottom,
+.top {
+  transition: opacity 0.3s ease-in-out;
 }
 
-#menu-container:focus {
-  box-shadow: none;
+.top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.font-Roboto {
-  font-family: Roboto, sans-serif;
+#main div.container-md {
+  padding-top: 86px;
+  padding-bottom: 86px;
 }
 
 #pictures > div {
@@ -34,20 +58,11 @@
   padding: 2px;
 }
 
-#main > section > div {
-  padding-top: 86px;
-  padding-bottom: 86px;
-}
-
 #pictures {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 1400px;
-}
-
-#portfolio-title {
-  font-family: Garamond, sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -61,17 +76,5 @@
     font-size: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-
-  .white-line {
-    background-color: white;
-    height: 1px;
-    width: 70%;
-  }
-
-  .white-line-short {
-    background-color: white;
-    height: 1px;
-    width: 30%;
   }
 }

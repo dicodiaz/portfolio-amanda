@@ -10,36 +10,38 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/8b3e10c73b.js" crossorigin="anonymous"></script>
   </head>
   <body class="font-Roboto" data-bs-spy="scroll">
     <header class="fixed-top">
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-md">
-          <a class="navbar-brand" href="#">Logo</a>
-          <a
-            id="icon-instagram"
-            class="nav-link"
-            href="https://www.instagram.com/amandapaolopez/"
-          ></a>
-          <a id="icon-tiktok" class="nav-link" href="https://www.tiktok.com/@amandapaolopez?"></a>
+          <a class="navbar-brand" href="#"></a>
+          <a id="icon-instagram" class="nav-link" href="https://www.instagram.com/amandapaolopez">
+            <i class="fab fa-instagram text-white fa-lg"></i>
+          </a>
+          <a id="icon-tiktok" class="nav-link" href="https://www.tiktok.com/@amandapaolopez">
+            <i class="fab fa-tiktok text-white fa-lg"></i>
+          </a>
           <button
-            id="menu-container"
-            class="navbar-toggler border-0"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#main-nav"
-            aria-controls="main-nav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          ></button>
+          >
+            <div class="cross-fading">
+              <i class="fas fa-times text-white fa-lg bottom opacity-0"></i>
+              <i class="fas fa-bars text-white fa-lg top"></i>
+            </div>
+          </button>
           <div class="collapse navbar-collapse" id="main-nav">
             <div id="menu" class="navbar-nav">
               <a class="nav-link" href="#about">About me</a>
-              <div class="white-line"></div>
+              <div class="white-line d-md-none"></div>
               <a class="nav-link" href="#portfolio">Portfolio</a>
-              <div class="white-line"></div>
+              <div class="white-line d-md-none"></div>
               <a class="nav-link" href="#commercial">Commercial</a>
-              <div class="white-line"></div>
+              <div class="white-line d-md-none"></div>
               <a class="nav-link" href="#contact">Contact me</a>
             </div>
           </div>
@@ -48,10 +50,12 @@
     </header>
     <main id="main" class="text-center">
       <section id="heading" class="d-flex flex-column justify-content-end bg-dark text-white">
-        <div class="row justify-content-center pb-2 mx-0">
-          <div class="col-11">
-            <h1 class="display-1">Amanda López</h1>
-            <h2 class="fs-6">Colombian model</h2>
+        <div class="container">
+          <div class="row justify-content-center pb-2 mx-0">
+            <div class="col-11">
+              <h1 class="display-1">Amanda López</h1>
+              <h2 class="fs-6">Colombian model</h2>
+            </div>
           </div>
         </div>
       </section>
@@ -75,9 +79,17 @@
         <div class="container-md">
           <div class="row justify-content-center">
             <div class="col-11">
-              <h2 id="portfolio-title" class="h1 mb-2">Portfolio</h2>
+              <h2 class="font-Garamond h1 mb-2">Portfolio</h2>
               <div class="white-line-short mb-4 mx-auto"></div>
-              <div id="pictures"></div>
+              <div id="picture-list"></div>
+              <!-- <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsable"
+              >
+                Button with data-bs-target
+              </button> -->
             </div>
           </div>
         </div>
@@ -86,12 +98,42 @@
         <div class="container-md">
           <div class="row justify-content-center">
             <div class="col-11">
-              <h2 class="h1">Commercial</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ullam neque eveniet
-                recusandae deleniti repellat, modi necessitatibus, adipisci, sequi molestias unde
-                dolor saepe et reprehenderit libero ratione facere fuga delectus.
-              </p>
+              <h2 class="h1 mb-4">Commercial</h2>
+              <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                  ></button>
+                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active"></div>
+                  <div class="carousel-item"></div>
+                  <div class="carousel-item"></div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carousel"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carousel"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
